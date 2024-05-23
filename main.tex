@@ -1,0 +1,56 @@
+\documentclass[10pt, aspectratio=169]{beamer}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=false,
+    % linkcolor=umBlue,
+    % filecolor=magenta,
+    % urlcolor=cyan,
+    % pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+    }
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{wrapfig}
+\usepackage{graphicx}
+\usepackage{helvet}
+\usepackage[T1]{fontenc}
+\usepackage{tikz}
+\usetikzlibrary{shapes, arrows, calc, positioning, patterns}
+\usetikzlibrary{decorations.pathreplacing}
+\usepackage{amsmath,amssymb, amsfonts}
+\usepackage{lipsum}
+\usepackage{datetime}
+\usepackage{setspace}
+\usepackage{listings}
+\usepackage{fancyvrb}
+
+\mode<presentation>{%
+    \usetheme{mod}
+    \usecolortheme{mod}
+}
+
+\title[]{Title of the Presentation}
+\author{Author Name}
+\institute[]{\noindent
+    Name of the Department\par
+    Name of the Institute\par
+}
+
+\setbeamersize{text margin left=.05\pdfpagewidth,text margin right=.05\pdfpagewidth}
+
+\begin{document}
+\setbeamertemplate{navigation symbols}{} % no navigation symbols, comment to show the symbols
+\bgroup
+\setbeamertemplate{footline}{} % no footer on title slide
+\maketitle
+\egroup
+\addtocounter{framenumber}{-1} % skips slide number form title slide
+\begin{frame}[t]{Files}
+\setstretch{1.5}
+    beamerthememod.sty: modified beamer style file.\\
+    beamercolorthememod.sty: define the colors used in the presentation (title slide, items, footer box).\\
+    use setstretch{2} inside the frame for doule spacing.
+\end{frame}
+\end{document}
+

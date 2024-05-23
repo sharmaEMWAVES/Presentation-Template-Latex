@@ -1,0 +1,77 @@
+\mode<presentation>
+\setbeamersize{text margin left=1em,text margin right=1em}
+%% =====================================
+%% Required Packages
+%%
+\RequirePackage{setspace}
+\RequirePackage{etoolbox}
+%% =====================================
+%% Title Page
+%%
+\setbeamertemplate{title page}{%
+%\begin{tikzpicture}[overlay, remember picture]
+ %       \node[left=0.2cm] at (current page.25){%
+  %          \includegraphics[width=1.5cm]{logo-um}
+   %     };
+    %\end{tikzpicture}
+    \begin{tikzpicture}
+        % if you want to set the box to some custom place instead of allign it evenly you need to use boundingbox
+        % \useasboundingbox (0,0) rectangle(\the\paperwidth,\the\paperheight);
+        \node[text width=0.9*\the\paperwidth,anchor=south west,inner sep=0pt,fill=white,opacity=0.80,text opacity=1] at (0,0.4*\the\paperheight) {%
+            \begin{beamercolorbox}[wd=\textwidth,sep=20pt, leftskip=0mm]{title box}%
+                {\setstretch{1.15}\usebeamerfont{title}\textcolor{color1}{\inserttitle}\par }\vspace{1em}
+                
+                {\usebeamerfont{author}\insertauthor}\vspace{0.3em}
+
+                {\usebeamerfont{institute}\insertinstitute}
+
+                \vfill
+            \end{beamercolorbox}
+        };
+    \end{tikzpicture}
+}
+
+
+%% =====================================
+%% Footer
+%%
+\defbeamertemplate*{footline}{infolines theme}
+{%
+  \leavevmode%
+  \hbox{%
+    \begin{beamercolorbox}[wd=.9\paperwidth,ht=3.5mm,dp=1.0ex,right]{first box in footer}%
+    \centering
+    \raisebox{0.5mm}{\usebeamerfont{title in head/foot}\textit{\insertshorttitle}}
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.1\paperwidth,ht=3.5mm,dp=1.0ex,right]{second box in footer}%
+    \centering
+        \raisebox{0.5mm}{%
+          \tiny\insertframenumber{} / \inserttotalframenumber%
+          %\addtocounter{framenumber}{-1}
+        }
+    \end{beamercolorbox}%
+  }%
+  \vskip0pt%
+}
+
+
+\setbeamertemplate{enumerate items}[circle]
+\setbeamercolor{item projected}{bg=color1,fg=white}
+\setbeamercolor{itemize item}{fg=color1, bg=white}
+% item indentation
+\setlength{\leftmargini}{0.5cm}
+\setlength{\leftmarginii}{0.5cm}
+
+%% =====================================
+%% Fonts
+%%
+\setbeamerfont{author}{size=\normalsize}
+\setbeamerfont{date}{size=\small}
+\setbeamerfont{institute}{size=\small}
+\setbeamerfont{subtitle}{series=\bfseries,size=\small}
+\setbeamerfont{title}{series=\bfseries, size=\Large}
+\setbeamerfont{frametitle}{series=\bfseries}
+\setbeamerfont{framesubtitle}{series=\mdseries}
+\setbeamerfont{footline}{size=\scriptsize}
+
+\mode<all>
