@@ -1,1 +1,1 @@
-# Presentation-Template-Latex
+# Presentation-Template-Latex (Modified Beamer)
